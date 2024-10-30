@@ -12,7 +12,14 @@ format:
 
 ## Introduction
 
-[No abstract is needed.]  Each replication project will have a straightforward, no frills report of the study and results.  These reports will be publicly available as supplementary material for the aggregate report(s) of the project as a whole.  Also, to maximize project integrity, the intro and methods will be written and critiqued in advance of data collection.  Introductions can be just 1-2 paragraphs clarifying the main idea of the original study, the target finding for replication, and any other essential information.  It will NOT have a literature review -- that is in the original publication. You can write both the introduction and the methods in past tense.  
+In recent decades, recommender systems have had an increasingly important role in shaping the consumer experience. These systems help users navigate a vast amount of information by filtering and presenting personalized content and product recommendations. As a student in the Computational Social Sciences program, I am particularly interested in exploring how these systems influence decision-making processes, social behaviors, and information exposure. My goal is to explore how understanding consumer psychology in the context of recommender systems can contribute to improving both scientific theory and the design of fairer, more effective recommendation models.
+
+This particular research used both a between-subjects design experiment and a more quantitative analysis to explore the effect of its recommender systems. For the purposes of this class, I will only be replicating the quantitative analysis. To reproduce these findings, I will use the data, which is available in .csv format through the Open Science Framework project, by conducting Exploratory Data Analysis and visualizing the descriptive statistics of the data. I will also replicate several multilevel regression models in Python to study the relationship between the variables.
+
+One potential challenge I might encounter is understanding the data holistically. Because I am only replicating the computational aspect of a study that incorporated both qualitative and quantitative methods, I may lack important context or insights that were derived from the qualitative analysis, which could limit my ability to fully interpret the results and their broader implications. Another challenge lies in the fact that the paper describes the qualitative aspect of the study much more in depth than the quantitative aspect, making it difficult to fully grasp the computational techniques and methods used. This lack of detailed explanation may lead to uncertainty in replicating the quantitative analysis accurately.
+
+Link to repository: https://github.com/80line/nobel2024
+Link to paper: https://github.com/80line/nobel2024/blob/main/original_paper/Nobel_2024.pdf
 
 
 ## Methods
