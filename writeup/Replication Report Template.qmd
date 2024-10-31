@@ -59,20 +59,23 @@ scipy.stats, matplotlib, seaborn, statsmodels, and scikit-learn.
 
 ### Procedure	
 
-The following procedure is directly quoted from the original paper and will be followed precisely, with the exception of being done in Python instead of R: 
+The following procedure is directly quoted from the original paper and will be followed precisely, with the exception of being done in
+Python instead of R: 
 
-"To model consumer choices based on the data different variations of linear mixed-effects regres- sion models were employed (Gill & Womack, 2013)."
+"To model consumer choices based on the data different variations of linear mixed-effects regres- sion models were employed (Gill & Womack,
+2013)."
 
-"Four different multilevel regression models were applied as determined by each outcome measure in Outcome Measures section. To illustrate the general model, I therefore focus on the right-
-hand side containing the predictors, which was common for all models. Particularities stemming from the outcome variable for each model will be outlined
-in the following Specific Models section. Note that as random assignment was employed, no control variables were added to the models."
+"Four different multilevel regression models were applied as determined by each outcome measure in Outcome Measures section. To illustrate
+the general model, I therefore focus on the right-
+hand side containing the predictors, which was common for all models. Particularities stemming from the outcome variable for each model will
+be outlined in the following Specific Models section. Note that as random assignment was employed, no control variables were added to the models."
 
 "Model 1 was a multilevel logistic regression model estimated using maximum likelihood (ML) approach where outcome variable 
-ymodel1 was a ij binary variable for the occurrence of purchase. 
-The variable was coded as 1 = occurrence of purchase, 0 = no occurrence of purchase. Model 2 was a multilevel logistic regression model estimated using ML approach where outcome variable 
-ymodel2 was a binary variable for the occurrence ij of add-to-cart. The variable was coded as 1 = occurrence of add-to-cart, 0 = no occurrence of add-to-cart. Model 3 was a multilevel 
-negative binomial regression estimated using ML estimation approach where outcome variable ymodel3 was ij the number of products viewed. Model 4 was a multilevel linear regression 
-estimated using restricted maximum likelihood estimation approach where outcome variable ymodel4 was session time in seconds."
+ymodel1 was a ij binary variable for the occurrence of purchase.The variable was coded as 1 = occurrence of purchase, 0 = no occurrence of 
+purchase. Model 2 was a multilevel logistic regression model estimated using ML approach where outcome variable ymodel2 was a binary 
+variable for the occurrence ij of add-to-cart. The variable was coded as 1 = occurrence of add-to-cart, 0 = no occurrence of add-to-cart. 
+Model 3 was a multilevel negative binomial regression estimated using ML estimation approach where outcome variable ymodel3 was ij the 
+number of products viewed. Model 4 was a multilevel linear regression estimated using restricted maximum likelihood estimation approach where outcome variable ymodel4 was session time in seconds."
 
 ### Analysis Plan
 
