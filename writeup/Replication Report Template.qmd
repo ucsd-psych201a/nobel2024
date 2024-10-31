@@ -12,10 +12,17 @@ format:
 
 ## Introduction
 
-In recent decades, recommender systems have had an increasingly important role in shaping the consumer experience. These systems help users navigate a vast amount of information by filtering and presenting personalized content and product recommendations. As a student in the Computational Social Sciences program, I am particularly interested in exploring how these systems influence decision-making processes, social behaviors, and information exposure. My goal is to explore how understanding consumer psychology in the context of recommender systems can contribute to improving both scientific theory and the design of fairer, more effective recommendation models.
+In recent decades, recommender systems have had an increasingly important role in shaping the consumer experience. These 
+systems help users navigate a vast amount of information by filtering and presenting personalized content and product 
+recommendations. As a student in the Computational Social Sciences program, I am particularly interested in exploring how these
+systems influence decision-making processes, social behaviors, and information exposure. My goal is to explore how 
+understanding consumer psychology in the context of recommender systems can contribute to improving both scientific theory and 
+the design of fairer, more effective recommendation models.
 
-This particular research used both a between-subjects design experiment and a more quantitative analysis to explore the effect of its recommender systems. For the purposes of this class, I 
-will only be replicating the quantitative analysis. To reproduce these findings, I will use the data, which is available in .csv format through the Open Science Framework project, by 
+This particular research used both a between-subjects design experiment and a more quantitative analysis to explore the effect 
+of its recommender systems. For the purposes of this class, I 
+will only be replicating the quantitative analysis. To reproduce these findings, I will use the data, which is available in 
+.csv format through the Open Science Framework project, by 
 conducting Exploratory Data Analysis and visualizing the descriptive statistics of the data. I will also replicate several multilevel regression models in Python to study the relationship 
 between the variables.
 
@@ -36,8 +43,10 @@ N/A
 
 ### Planned Sample
 
-In this experiment, researchers collected data based on real customers from a store specializing in carpets, Retailer A, as well as a store that sold photography equipment, Retailer B.
-This data is split into two datasets, cyberfoto.csv and kilands.csv. Both datasets contain the same information, such as user_id, number of clicks, search session length, number of
+In this experiment, researchers collected data based on real customers from a store specializing in carpets, Retailer A, as 
+well as a store that sold photography equipment, Retailer B.
+This data is split into two datasets, cyberfoto.csv and kilands.csv. Both datasets contain the same information, such as 
+user_id, number of clicks, search session length, number of
 products displayed to the user, and number of purchases.
 
 ### Materials
@@ -57,7 +66,8 @@ The following procedure is directly quoted from the original paper and will be f
 hand side containing the predictors, which was common for all models. Particularities stemming from the outcome variable for each model will be outlined
 in the following Specific Models section. Note that as random assignment was employed, no control variables were added to the models."
 
-"Model 1 was a multilevel logistic regression model estimated using maximum likelihood (ML) approach where outcome variable ymodel1 was a ij binary variable for the occurrence of purchase. 
+"Model 1 was a multilevel logistic regression model estimated using maximum likelihood (ML) approach where outcome variable 
+ymodel1 was a ij binary variable for the occurrence of purchase. 
 The variable was coded as 1 = occurrence of purchase, 0 = no occurrence of purchase. Model 2 was a multilevel logistic regression model estimated using ML approach where outcome variable 
 ymodel2 was a binary variable for the occurrence ij of add-to-cart. The variable was coded as 1 = occurrence of add-to-cart, 0 = no occurrence of add-to-cart. Model 3 was a multilevel 
 negative binomial regression estimated using ML estimation approach where outcome variable ymodel3 was ij the number of products viewed. Model 4 was a multilevel linear regression 
@@ -65,16 +75,22 @@ estimated using restricted maximum likelihood estimation approach where outcome 
 
 ### Analysis Plan
 
-My analysis plan follows the original paper's approach, using multilevel regression models to evaluate choice overload effects of RS algorithm changes on purchase, add-to-cart actions, 
-session time, and product views. Outlier sessions (2.5 SD above the mean) will be excluded, and a random intercept per consumer will account for individual behavior across sessions. For 
-additional analysis, I will also compute descriptive statistics for the features we are interested in. Also, I will conduct a correlation analysis to explore correlations among engagement 
+My analysis plan follows the original paper's approach, using multilevel regression models to evaluate choice overload effects 
+of RS algorithm changes on purchase, add-to-cart actions, 
+session time, and product views. Outlier sessions (2.5 SD above the mean) will be excluded, and a random intercept per consumer
+will account for individual behavior across sessions. For 
+additional analysis, I will also compute descriptive statistics for the features we are interested in. Also, I will conduct a 
+correlation analysis to explore correlations among engagement 
 metrics, like "number of products displayed," "add-to-carts," and "clicks" to see if viewing more items correlates with higher purchase rates.
 
 ### Differences from Original Study
 
-The original study uses a between-subjects experiment where subjects are asked to interact with recommender systems that are categorized in a high attractiveness or low attractiveness 
-condition. From there, certain engagement metrics are assesed and analyzed in R. My study will not replicate the between-subjects experiment, and instead focus on reproducing the results 
-of the quantitative analysis in Python. I will also do some additional computation, including generating descriptive statistics and a correlation analysis.
+The original study uses a between-subjects experiment where subjects are asked to interact with recommender systems that are 
+categorized in a high attractiveness or low attractiveness 
+condition. From there, certain engagement metrics are assesed and analyzed in R. My study will not replicate the 
+between-subjects experiment, and instead focus on reproducing the results 
+of the quantitative analysis in Python. I will also do some additional computation, including generating descriptive statistics
+and a correlation analysis.
 
 
 ### Methods Addendum (Post Data Collection)
@@ -89,9 +105,21 @@ You can comment this section out prior to final report with data collection.
 
 ## Design Overview
 
-In this study, researchers only manipulated 1 factor: the "attractiveness" of the recommender system they used, categorizing each one as "High Attractiveness (HA) or Low Attractiveness (LA). It used a between-participants design, which used 4 measures to evaluate choice overload. The measures were whether a customer purchased a product, if they added it to cart, the number of products viewed in a session, and the session time. These measures were repeated for each customer in the study. For its computational aspect, it conducted a linear regression and multi-level regression in R. If the researchers were to conduct the quantitative analysis in a different programming language, the analysis insights should be the same or similar, but might vary in the visualizations produced and readability of the code.
+In this study, researchers only manipulated 1 factor: the "attractiveness" of the recommender system they used, categorizing 
+each one as "High Attractiveness (HA) or Low Attractiveness (LA). It used a between-participants design, which used 4 measures 
+to evaluate choice overload. The measures were whether a customer purchased a product, if they added it to cart, the number of 
+products viewed in a session, and the session time. These measures were repeated for each customer in the study. For its 
+computational aspect, it conducted a linear regression and multi-level regression in R. If the researchers were to conduct the 
+quantitative analysis in a different programming language, the analysis insights should be the same or similar, but might vary 
+in the visualizations produced and readability of the code.
 
-One way I would critique the experimental design is that it lacks data on subjective measures, such as the individual customer's satisfaction, perceived difficulty, or regret. These subjective responses can be important indicators of choice overload and perception of the recommender system, but were not accessible in the field setting. Additionally, there is potential for confounds within the data collected from each customer, as variables such as personal preferences and prior experience with similar products might influence the results. In terms of generalizability, the fact that the study was conducted with 2 relatively niche retailers (carpet store and photography device store) might limit the generalizability of the findings to other retail contexts.
+One way I would critique the experimental design is that it lacks data on subjective measures, such as the individual 
+customer's satisfaction, perceived difficulty, or regret. These subjective responses can be important indicators of choice 
+overload and perception of the recommender system, but were not accessible in the field setting. Additionally, there is
+potential for confounds within the data collected from each customer, as variables such as personal preferences and prior 
+experience with similar products might influence the results. In terms of generalizability, the fact that the study was 
+conducted with 2 relatively niche retailers (carpet store and photography device store) might limit the generalizability of the
+findings to other retail contexts.
 
 
 ## Results
