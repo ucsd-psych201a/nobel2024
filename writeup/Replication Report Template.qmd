@@ -87,6 +87,12 @@ You can comment this section out prior to final report with data collection.
 #### Differences from pre-data collection methods plan
   Any differences from what was described as the original plan, or “none”.
 
+## Design Overview
+
+In this study, researchers only manipulated 1 factor: the "attractiveness" of the recommender system they used, categorizing each one as "High Attractiveness (HA) or Low Attractiveness (LA). It used a between-participants design, which used 4 measures to evaluate choice overload. The measures were whether a customer purchased a product, if they added it to cart, the number of products viewed in a session, and the session time. These measures were repeated for each customer in the study. For its computational aspect, it conducted a linear regression and multi-level regression in R. If the researchers were to conduct the quantitative analysis in a different programming language, the analysis insights should be the same or similar, but might vary in the visualizations produced and readability of the code.
+
+One way I would critique the experimental design is that it lacks data on subjective measures, such as the individual customer's satisfaction, perceived difficulty, or regret. These subjective responses can be important indicators of choice overload and perception of the recommender system, but were not accessible in the field setting. Additionally, there is potential for confounds within the data collected from each customer, as variables such as personal preferences and prior experience with similar products might influence the results. In terms of generalizability, the fact that the study was conducted with 2 relatively niche retailers (carpet store and photography device store) might limit the generalizability of the findings to other retail contexts.
+
 
 ## Results
 
