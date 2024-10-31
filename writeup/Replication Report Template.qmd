@@ -1,6 +1,6 @@
 ---
-title: "Replication of Study X by Sample & Sample (20xx, Psychological Science)"
-author: "Replication Author[s] (contact information)"
+title: "Replication of Recommender Systems Study by Nurit Nobel (2024, Psychological Science)"
+author: "Adeline Liem"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
   html:
