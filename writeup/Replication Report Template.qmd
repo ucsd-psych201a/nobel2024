@@ -20,16 +20,17 @@ understanding consumer psychology in the context of recommender systems can cont
 the design of fairer, more effective recommendation models.
 
 This particular research used both a between-subjects design experiment and a more quantitative analysis to explore the effect 
-of its recommender systems. For the purposes of this class, I 
-will only be replicating the quantitative analysis. To reproduce these findings, I will use the data, which is available in 
-.csv format through the Open Science Framework project, by 
-conducting Exploratory Data Analysis and visualizing the descriptive statistics of the data. I will also replicate several multilevel regression models in Python to study the relationship 
-between the variables.
+of its recommender systems. For the purposes of this class, I will only be replicating the quantitative analysis. To reproduce 
+these findings, I will use the data, which is available in .csv format through the Open Science Framework project, by 
+conducting Exploratory Data Analysis and visualizing the descriptive statistics of the data. I will also replicate several 
+multilevel regression models in Python to study the relationship between the variables.
 
-One potential challenge I might encounter is understanding the data holistically. Because I am only replicating the computational aspect of a study that incorporated both qualitative and 
-quantitative methods, I may lack important context or insights that were derived from the qualitative analysis, which could limit my ability to fully interpret the results and their 
-broader implications. Another challenge lies in the fact that the paper describes the qualitative aspect of the study much more in depth than the quantitative aspect, making it difficult 
-to fully grasp the computational techniques and methods used. This lack of detailed explanation may lead to uncertainty in replicating the quantitative analysis accurately.
+One potential challenge I might encounter is understanding the data holistically. Because I am only replicating the 
+computational aspect of a study that incorporated both qualitative and quantitative methods, I may lack important context or 
+insights that were derived from the qualitative analysis, which could limit my ability to fully interpret the results and their
+broader implications. Another challenge lies in the fact that the paper describes the qualitative aspect of the study much more
+in depth than the quantitative aspect, making it difficult to fully grasp the computational techniques and methods used. This 
+lack of detailed explanation may lead to uncertainty in replicating the quantitative analysis accurately.
 
 Link to repository: https://github.com/80line/nobel2024
 Link to paper: https://github.com/80line/nobel2024/blob/main/original_paper/Nobel_2024.pdf
@@ -44,17 +45,17 @@ N/A
 ### Planned Sample
 
 In this experiment, researchers collected data based on real customers from a store specializing in carpets, Retailer A, as 
-well as a store that sold photography equipment, Retailer B.
-This data is split into two datasets, cyberfoto.csv and kilands.csv. Both datasets contain the same information, such as 
-user_id, number of clicks, search session length, number of
+well as a store that sold photography equipment, Retailer B. This data is split into two datasets, cyberfoto.csv and 
+kilands.csv. Both datasets contain the same information, such as user_id, number of clicks, search session length, number of
 products displayed to the user, and number of purchases.
 
 ### Materials
 
-For the computational analysis, the researchers used R to develop their insights. For their packages, they used tidyverse, tidytext, SnowballC, pwr, gridExtra, powerAnalysis, broom, 
-generics, knitr, forestmangr, arsenal, qwraps2, grid, psych, apaTables, skimr, lme4, emmeans, car, and sjplot. 
+For the computational analysis, the researchers used R to develop their insights. For their packages, they used tidyverse, 
+tidytext, SnowballC, pwr, gridExtra, powerAnalysis, broom, generics, knitr, forestmangr, arsenal, qwraps2, grid, psych, apaTables, skimr, lme4, emmeans, car, and sjplot. 
 
-My project involves reproducing their quantitative analysis in Python. I will likely use packages such as pandas, numpy, scipy.stats, matplotlib, seaborn, statsmodels, and scikit-learn.
+My project involves reproducing their quantitative analysis in Python. I will likely use packages such as pandas, numpy, 
+scipy.stats, matplotlib, seaborn, statsmodels, and scikit-learn.
 
 ### Procedure	
 
@@ -76,20 +77,14 @@ estimated using restricted maximum likelihood estimation approach where outcome 
 ### Analysis Plan
 
 My analysis plan follows the original paper's approach, using multilevel regression models to evaluate choice overload effects 
-of RS algorithm changes on purchase, add-to-cart actions, 
-session time, and product views. Outlier sessions (2.5 SD above the mean) will be excluded, and a random intercept per consumer
-will account for individual behavior across sessions. For 
+of RS algorithm changes on purchase, add-to-cart actions, session time, and product views. Outlier sessions (2.5 SD above the mean) will be excluded, and a random intercept per consumer will account for individual behavior across sessions. For 
 additional analysis, I will also compute descriptive statistics for the features we are interested in. Also, I will conduct a 
-correlation analysis to explore correlations among engagement 
-metrics, like "number of products displayed," "add-to-carts," and "clicks" to see if viewing more items correlates with higher purchase rates.
+correlation analysis to explore correlations among engagement metrics, like "number of products displayed," "add-to-carts," and "clicks" to see if viewing more items correlates with higher purchase rates.
 
 ### Differences from Original Study
 
 The original study uses a between-subjects experiment where subjects are asked to interact with recommender systems that are 
-categorized in a high attractiveness or low attractiveness 
-condition. From there, certain engagement metrics are assesed and analyzed in R. My study will not replicate the 
-between-subjects experiment, and instead focus on reproducing the results 
-of the quantitative analysis in Python. I will also do some additional computation, including generating descriptive statistics
+categorized in a high attractiveness or low attractiveness condition. From there, certain engagement metrics are assesed and analyzed in R. My study will not replicate the between-subjects experiment, and instead focus on reproducing the results sof the quantitative analysis in Python. I will also do some additional computation, including generating descriptive statistics
 and a correlation analysis.
 
 
