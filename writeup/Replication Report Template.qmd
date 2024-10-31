@@ -26,29 +26,39 @@ Link to paper: https://github.com/80line/nobel2024/blob/main/original_paper/Nobe
 
 ### Power Analysis
 
-Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size.
+N/A
 
 ### Planned Sample
 
-Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any.
+In this experiment, researchers collected data based on real customers from a store specializing in carpets, Retailer A, as well as a store that sold photography equipment, Retailer B.
+This data is split into two datasets, cyberfoto.csv and kilands.csv. Both datasets contain the same information, such as user_id, number of clicks, search session length, number of
+products displayed to the user, and number of purchases.
 
 ### Materials
 
-All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+For the computational analysis, the researchers used R to develop their insights. For their packages, they used tidyverse, tidytext, SnowballC, pwr, gridExtra, powerAnalysis, broom, generics, knitr, forestmangr, arsenal, qwraps2, grid, psych, apaTables, skimr, lme4, emmeans, car, and sjplot. 
+
+My project involves reproducing their quantitative analysis in Python. I will likely use packages such as pandas, numpy, scipy.stats, matplotlib, seaborn, statsmodels, and scikit-learn.
 
 ### Procedure	
 
-Can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+The following procedure is directly quoted from the original paper and will be followed precisely, with the exception of being done in Python instead of R: 
+
+"To model consumer choices based on the data different variations of linear mixed-effects regres- sion models were employed (Gill & Womack, 2013)."
+
+"Four different multilevel regression models were applied as determined by each outcome measure in Outcome Measures section. To illustrate the general model, I therefore focus on the right-hand side containing the predictors, which was common for all models. Particularities stemming from the outcome variable for each model will be outlined
+in the following Specific Models section. Note that as random assignment was employed, no control variables were added to the models."
+
+"Model 1 was a multilevel logistic regression model estimated using maximum likelihood (ML) approach where outcome variable ymodel1 was a ij binary variable for the occurrence of purchase. The variable was coded as 1 = occurrence of purchase, 0 = no occurrence of purchase. Model 2 was a multilevel logistic regression model estimated using ML approach where outcome variable ymodel2 was a binary variable for the occurrence ij of add-to-cart. The variable was coded as 1 = occurrence of add-to-cart, 0 = no occurrence of add-to-cart. Model 3 was a multilevel negative binomial regression estimated using ML estimation approach where outcome variable ymodel3 was ij the number of products viewed. Model 4 was a multilevel linear regression estimated using restricted maximum likelihood estimation approach where outcome variable ymodel4 was session time in seconds."
 
 ### Analysis Plan
 
-Can also quote directly, though it is less often spelled out effectively for an analysis strategy section.  The key is to report an analysis strategy that is as close to the original - data cleaning rules, data exclusion rules, covariates, etc. - as possible.  
-
-**Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do.
+My analysis plan follows the original paper's approach, using multilevel regression models to evaluate choice overload effects of RS algorithm changes on purchase, add-to-cart actions, session time, and product views. Outlier sessions (2.5 SD above the mean) will be excluded, and a random intercept per consumer will account for individual behavior across sessions. For additional analysis, I will also compute descriptive statistics for the features we are interested in. Also, I will conduct a correlation analysis to explore correlations among engagement metrics, like "number of products displayed," "add-to-carts," and "clicks" to see if viewing more items correlates with higher purchase rates.
 
 ### Differences from Original Study
 
-Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study.  The goal, of course, is to minimize those differences, but differences will inevitably occur.  Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect.
+The original study uses a between-subjects experiment where subjects are asked to interact with recommender systems that are categorized in a high attractiveness or low attractiveness condition. From there, certain engagement metrics are assesed and analyzed in R. My study will not replicate the between-subjects experiment, and instead focus on reproducing the results of the quantitative analysis in Python. I will also do some additional computation, including generating descriptive statistics and a correlation analysis.
+
 
 ### Methods Addendum (Post Data Collection)
 
