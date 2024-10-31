@@ -77,14 +77,18 @@ estimated using restricted maximum likelihood estimation approach where outcome 
 ### Analysis Plan
 
 My analysis plan follows the original paper's approach, using multilevel regression models to evaluate choice overload effects 
-of RS algorithm changes on purchase, add-to-cart actions, session time, and product views. Outlier sessions (2.5 SD above the mean) will be excluded, and a random intercept per consumer will account for individual behavior across sessions. For 
+of RS algorithm changes on purchase, add-to-cart actions, session time, and product views. Outlier sessions (2.5 SD above the mean) will be 
+excluded, and a random intercept per consumer will account for individual behavior across sessions. For 
 additional analysis, I will also compute descriptive statistics for the features we are interested in. Also, I will conduct a 
-correlation analysis to explore correlations among engagement metrics, like "number of products displayed," "add-to-carts," and "clicks" to see if viewing more items correlates with higher purchase rates.
+correlation analysis to explore correlations among engagement metrics, like "number of products displayed," "add-to-carts," and "clicks" to 
+see if viewing more items correlates with higher purchase rates.
 
 ### Differences from Original Study
 
 The original study uses a between-subjects experiment where subjects are asked to interact with recommender systems that are 
-categorized in a high attractiveness or low attractiveness condition. From there, certain engagement metrics are assesed and analyzed in R. My study will not replicate the between-subjects experiment, and instead focus on reproducing the results sof the quantitative analysis in Python. I will also do some additional computation, including generating descriptive statistics
+categorized in a high attractiveness or low attractiveness condition. From there, certain engagement metrics are assesed and analyzed in R. 
+My study will not replicate the between-subjects experiment, and instead focus on reproducing the results sof the quantitative analysis in 
+Python. I will also do some additional computation, including generating descriptive statistics
 and a correlation analysis.
 
 
