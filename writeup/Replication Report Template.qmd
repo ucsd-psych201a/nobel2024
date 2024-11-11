@@ -125,6 +125,14 @@ experience with similar products might influence the results. In terms of genera
 conducted with 2 relatively niche retailers (carpet store and photography device store) might limit the generalizability of the
 findings to other retail contexts.
 
+## Project Progress Check #1
+The outcome measure for the success or failure of your reproduction and how exactly this outcome will be computed.
+In order to measure the success of the outcome of my reproduction, I will be 
+
+As part of the Project Report assignment, you described the steps necessary to reproduce the key result(s) of this study. Please describe your progress on each of these steps (e.g., data preprocessing, model fitting, model evaluation).
+
+
+
 
 ## Results
 
