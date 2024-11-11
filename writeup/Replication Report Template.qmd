@@ -126,13 +126,9 @@ conducted with 2 relatively niche retailers (carpet store and photography device
 findings to other retail contexts.
 
 ## Project Progress Check #1
-The outcome measure for the success or failure of your reproduction and how exactly this outcome will be computed.
-In order to measure the success of the outcome of my reproduction, I will be 
+In order to measure the success of the outcome of my reproduction, I will be comparing the results of the descriptive statistics, ANOVA, linear mixed-effects models, and power analysis with the R code to my Python code. This means ensuring the numerical outputs of the R code match that of the Python code. I will compute these using built in Pandas and Statsmodels functions, such as .describe() and .mixedlm() and compare their outputs.
 
-As part of the Project Report assignment, you described the steps necessary to reproduce the key result(s) of this study. Please describe your progress on each of these steps (e.g., data preprocessing, model fitting, model evaluation).
-
-
-
+At this point in the project, I have successfully loaded and explored the most important aspects of the datasets I'm working with. I have also finished downloading all the necessary R libraries I will need to do run the R code. Currently, I am working on data wrangling and generating more in-depth descriptive statistics. I have not begun generating regression models or data visualizations yet, but I expect to make further progress on these steps in the coming weeks. 
 
 ## Results
 
