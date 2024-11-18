@@ -5,7 +5,7 @@ library(tidytext) # for text wrangling
 library(SnowballC) # for stemming text data 
 library(pwr) # for power analysis 
 library(gridExtra) # for plotting multiple graphs
-library(powerAnalysis)
+#library(powerAnalysis)
 library(broom)
 library(generics)
 library(knitr)
@@ -20,7 +20,7 @@ library(skimr) # Compact and Flexible Summaries of Data
 library(lme4)
 library(emmeans)
 library(car)
-library(sjplot)
+#library(sjplot)
 
 #### KILANDS ####
 
