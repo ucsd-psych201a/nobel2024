@@ -1,3 +1,7 @@
+.DS_Store
+
+nobel2024.Rproj
+
 # History files
 .Rhistory
 .Rapp.history
@@ -57,7 +61,3 @@ rsconnect/
 *_files/
 # html files (output by Quarto)
 *.html
-
-.DS_Store
-
-nobel2024.Rproj
