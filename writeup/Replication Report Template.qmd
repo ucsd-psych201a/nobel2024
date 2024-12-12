@@ -24,7 +24,6 @@ computational aspect of a study that incorporated both qualitative and quantitat
 Link to repository: https://github.com/80line/nobel2024
 Link to paper: https://github.com/80line/nobel2024/blob/main/original_paper/Nobel_2024.pdf
 
-
 ## Methods
 
 ### Power Analysis
@@ -34,7 +33,7 @@ N/A
 ### Planned Sample
 
 In this experiment, researchers collected data based on real customers from a store specializing in carpets, Kilands, as well as a store that sold photography equipment, Cyberfoto. This data is split into two datasets, cyberfoto.csv and 
-kilands.csv. Both datasets contain mostlythe same information, such as user_id, number of clicks, search session length, number of products displayed to the user, and number of purchases, except Cyberfoto did not report “click position” and “purchase position”.
+kilands.csv. Both datasets contain mostly the same information, such as user_id, number of clicks, search session length, number of products displayed to the user, and number of purchases, except Cyberfoto did not report “click position” and “purchase position”. There were 37,005 observations collected from Cyberfoto, and 14,832 observations collected from Kilands.
 
 ### Materials
 
@@ -57,7 +56,11 @@ where outcome variable ymodel4 was session time in seconds."
 
 ### Analysis Plan
 
-My analysis plan follows the original paper's approach, using multilevel regression models to evaluate choice overload effects of RS algorithm changes on purchase, add-to-cart actions, session time, and product views. Outlier sessions (2.5 SD above the mean) will be excluded, and a random intercept per consumer will account for individual behavior across sessions. For additional analysis, I will also compute descriptive statistics for the features we are interested in. Also, I will conduct a correlation analysis to explore correlations among engagement metrics, like "number of products displayed," "add-to-carts," and "clicks" to see if viewing more items correlates with higher purchase rates. To compare the results of the regression models across Python and R, I will be specifically looking at intercept/SE, random intercept variance/SE, and p-value.
+My analysis plan follows the original paper's approach, using multilevel regression models to evaluate choice overload effects of RS algorithm changes on purchase, add-to-cart actions, session time, and product views. First, to clean and wrangle the data, outlier sessions (2.5 SD above the mean) will be identified and excluded, and a random intercept per consumer will account for individual behavior across sessions. 
+
+For additional analysis, I will also compute an exploratory data analysis for both the Kilands and Cyberfoto dataset. This means looking at basic descriptive statistics, basic information, counting null values, and generating visualizations to better understand the data. Also, I will conduct a correlation analysis to explore correlations among engagement metrics. 
+
+Finally, for the regression analysis, I will be using different types of regression models depending on the hypothesis. For hypothesis A: add-to-cart and hypothesis B: purchase, I will use a multilevel logistic regression model. For hypothesis C: products viewed, I will use a multilevel negative binomial regression model. For hypothesis D: search session length, I will use a multilevel linear regression model. To compare the results of the regression models across Python and R, I will be specifically looking at intercept/SE, random intercept variance/SE, and p-value.
 
 ### Differences from Original Study
 
@@ -65,13 +68,8 @@ The original study uses a between-subjects experiment where subjects are asked t
 
 ### Methods Addendum (Post Data Collection)
 
-You can comment this section out prior to final report with data collection.
-
-#### Actual Sample
-  There were 37,005 observations collected from Cyberfoto, and 14,832 observations collected from Kilands.
-
 #### Differences from pre-data collection methods plan
-  Because my project is a reporduction, I will not be collecting any new data.
+In addition to reproducing the analysis in Python instead of R, I had to use a different regression model type for hypothesis C: products viewed. This is because in the original study, the author uses a multilevel negative binomial regression model with random effects, but Python lacks an equivalent that doesn't require importing R. Therefore, I used a multilevel negative binomial regression model without random effects. 
 
 ## Design Overview
 
@@ -118,7 +116,9 @@ Any follow-up analyses desired (not required).
 
 ### Summary of Replication Attempt
 
-Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result. 
+
+In the original paper, Nobel found that there was no significant difference between high and low attractiveness recommender systems' effects on the probability of an add-to-cart, purchase, products viewed, or search session length. In my reproduction, I also found the same results, alongside very similar intercepts, standard errors, random intercept variances, and p-values across all hypothesis, with the exception for products viewed. Because of this, I would say that I successfully reproduced the original result.
 
 ### Commentary
 
