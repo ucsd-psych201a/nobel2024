@@ -82,15 +82,7 @@ customer's satisfaction, perceived difficulty, or regret. These subjective respo
 overload and perception of the recommender system, but were not accessible in the field setting. Additionally, there is
 potential for confounds within the data collected from each customer, as variables such as personal preferences and prior 
 experience with similar products might influence the results. In terms of generalizability, the fact that the study was 
-conducted with 2 relatively niche retailers (carpet store and photography device store) might limit the generalizability of the
-findings to other retail contexts.
-
-## Project Progress Check #1
-In order to measure the success of the outcome of my reproduction, I will be comparing the results of the descriptive statistics, ANOVA, linear mixed-effects models, and power analysis with the R code to my Python code. This means ensuring the numerical outputs of the R code match that of the Python code. I will compute these using built in Pandas and Statsmodels functions, such as .describe() and .mixedlm() and compare their outputs.
-
-At this point in the project, I have successfully loaded and explored the most important aspects of the datasets I'm working with. I have also finished downloading all the necessary R libraries I will need to do run the R code. Currently, I am working on data wrangling and generating more in-depth descriptive statistics. I have not begun generating regression models or data visualizations yet, but I expect to make further progress on these steps in the coming weeks. 
-
-## Project Progress Check #2
+conducted with 2 relatively niche retailers (carpet store and photography device store) might limit the generalizability of the findings to other retail contexts.
 
 
 ## Results
