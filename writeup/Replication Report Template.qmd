@@ -8,29 +8,18 @@ format:
     toc_depth: 3
 ---
 
-<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
 
 ## Introduction
 
 In recent decades, recommender systems have had an increasingly important role in shaping the consumer experience. These 
 systems help users navigate a vast amount of information by filtering and presenting personalized content and product 
-recommendations. As a student in the Computational Social Sciences program, I am particularly interested in exploring how these
-systems influence decision-making processes, social behaviors, and information exposure. My goal is to explore how 
-understanding consumer psychology in the context of recommender systems can contribute to improving both scientific theory and 
-the design of fairer, more effective recommendation models.
+recommendations. As a student in the Computational Social Sciences program, I am particularly interested in exploring how these systems influence decision-making processes, social behaviors, and information exposure. My goal is to explore how 
+understanding consumer psychology in the context of recommender systems can contribute to improving both scientific theory and the design of fairer, more effective recommendation models.
 
-This particular research used both a between-subjects design experiment and a more quantitative analysis to explore the effect 
-of its recommender systems. For the purposes of this class, I will only be replicating the quantitative analysis. To reproduce 
-these findings, I will use the data, which is available in .csv format through the Open Science Framework project, by 
-conducting Exploratory Data Analysis and visualizing the descriptive statistics of the data. I will also replicate several 
-multilevel regression models in Python to study the relationship between the variables.
+This particular research used both a between-subjects design experiment and a more quantitative analysis to explore the effect of its recommender systems. For the purposes of this class, I will only be replicating the quantitative analysis. To reproduce these findings, I will use the data, which is available in .csv format through the Open Science Framework project, by conducting Exploratory Data Analysis and visualizing the descriptive statistics of the data. I will also replicate several multilevel regression models in Python to study the relationship between the variables.
 
 One potential challenge I might encounter is understanding the data holistically. Because I am only replicating the 
-computational aspect of a study that incorporated both qualitative and quantitative methods, I may lack important context or 
-insights that were derived from the qualitative analysis, which could limit my ability to fully interpret the results and their
-broader implications. Another challenge lies in the fact that the paper describes the qualitative aspect of the study much more
-in depth than the quantitative aspect, making it difficult to fully grasp the computational techniques and methods used. This 
-lack of detailed explanation may lead to uncertainty in replicating the quantitative analysis accurately.
+computational aspect of a study that incorporated both qualitative and quantitative methods, I may lack important context or insights that were derived from the qualitative analysis, which could limit my ability to fully interpret the results and their broader implications. Another challenge lies in the fact that the paper describes the qualitative aspect of the study much more in depth than the quantitative aspect, making it difficult to fully grasp the computational techniques and methods used. This lack of detailed explanation may lead to uncertainty in replicating the quantitative analysis accurately.
 
 Link to repository: https://github.com/80line/nobel2024
 Link to paper: https://github.com/80line/nobel2024/blob/main/original_paper/Nobel_2024.pdf
@@ -44,10 +33,8 @@ N/A
 
 ### Planned Sample
 
-In this experiment, researchers collected data based on real customers from a store specializing in carpets, Retailer A, as 
-well as a store that sold photography equipment, Retailer B. This data is split into two datasets, cyberfoto.csv and 
-kilands.csv. Both datasets contain the same information, such as user_id, number of clicks, search session length, number of
-products displayed to the user, and number of purchases.
+In this experiment, researchers collected data based on real customers from a store specializing in carpets, Kilands, as well as a store that sold photography equipment, Cyberfoto. This data is split into two datasets, cyberfoto.csv and 
+kilands.csv. Both datasets contain mostlythe same information, such as user_id, number of clicks, search session length, number of products displayed to the user, and number of purchases, except Cyberfoto did not report “click position” and “purchase position”.
 
 ### Materials
 
@@ -55,67 +42,40 @@ For the computational analysis, the researchers used R to develop their insights
 tidytext, SnowballC, pwr, gridExtra, powerAnalysis, broom, generics, knitr, forestmangr, arsenal, qwraps2, grid, psych, apaTables, skimr, lme4, emmeans, car, and sjplot. 
 
 My project involves reproducing their quantitative analysis in Python. I will likely use packages such as pandas, numpy, 
-scipy.stats, matplotlib, seaborn, statsmodels, and scikit-learn.
+scipy.stats, matplotlib, seaborn, statsmodels, scikit-learn, and pymer4.models.
 
 ### Procedure	
 
-The following procedure is directly quoted from the original paper and will be followed precisely, with the exception of being done in
-Python instead of R: 
+The following procedure is directly quoted from the original paper and will be followed precisely, with the exception of being done in Python instead of R: 
 
-"To model consumer choices based on the data different variations of linear mixed-effects regres- sion models were employed (Gill & Womack,
-2013)."
+"To model consumer choices based on the data different variations of linear mixed-effects regression models were employed (Gill & Womack,2013)."
 
-"Four different multilevel regression models were applied as determined by each outcome measure in Outcome Measures section. To illustrate
-the general model, I therefore focus on the right-
-hand side containing the predictors, which was common for all models. Particularities stemming from the outcome variable for each model will
-be outlined in the following Specific Models section. Note that as random assignment was employed, no control variables were added to the 
-models."
+"Four different multilevel regression models were applied as determined by each outcome measure in Outcome Measures section. To illustrate the general model, I therefore focus on the righthand side containing the predictors, which was common for all models. Particularities stemming from the outcome variable for each model will be outlined in the following Specific Models section. Note that as random assignment was employed, no control variables were added to the models."
 
-"Model 1 was a multilevel logistic regression model estimated using maximum likelihood (ML) approach where outcome variable 
-ymodel1 was a ij binary variable for the occurrence of purchase.The variable was coded as 1 = occurrence of purchase, 0 = no occurrence of 
-purchase. Model 2 was a multilevel logistic regression model estimated using ML approach where outcome variable ymodel2 was a binary 
-variable for the occurrence ij of add-to-cart. The variable was coded as 1 = occurrence of add-to-cart, 0 = no occurrence of add-to-cart. 
-Model 3 was a multilevel negative binomial regression estimated using ML estimation approach where outcome variable ymodel3 was ij the 
-number of products viewed. Model 4 was a multilevel linear regression estimated using restricted maximum likelihood estimation approach 
+"Model 1 was a multilevel logistic regression model estimated using maximum likelihood (ML) approach where outcome variable ymodel1 was a ij binary variable for the occurrence of purchase.The variable was coded as 1 = occurrence of purchase, 0 = no occurrence of purchase. Model 2 was a multilevel logistic regression model estimated using ML approach where outcome variable ymodel2 was a binary variable for the occurrence ij of add-to-cart. The variable was coded as 1 = occurrence of add-to-cart, 0 = no occurrence of add-to-cart. Model 3 was a multilevel negative binomial regression estimated using ML estimation approach where outcome variable ymodel3 was ij the number of products viewed. Model 4 was a multilevel linear regression estimated using restricted maximum likelihood estimation approach 
 where outcome variable ymodel4 was session time in seconds."
 
 ### Analysis Plan
 
-My analysis plan follows the original paper's approach, using multilevel regression models to evaluate choice overload effects 
-of RS algorithm changes on purchase, add-to-cart actions, session time, and product views. Outlier sessions (2.5 SD above the mean) will be 
-excluded, and a random intercept per consumer will account for individual behavior across sessions. For 
-additional analysis, I will also compute descriptive statistics for the features we are interested in. Also, I will conduct a 
-correlation analysis to explore correlations among engagement metrics, like "number of products displayed," "add-to-carts," and "clicks" to 
-see if viewing more items correlates with higher purchase rates.
+My analysis plan follows the original paper's approach, using multilevel regression models to evaluate choice overload effects of RS algorithm changes on purchase, add-to-cart actions, session time, and product views. Outlier sessions (2.5 SD above the mean) will be excluded, and a random intercept per consumer will account for individual behavior across sessions. For additional analysis, I will also compute descriptive statistics for the features we are interested in. Also, I will conduct a correlation analysis to explore correlations among engagement metrics, like "number of products displayed," "add-to-carts," and "clicks" to see if viewing more items correlates with higher purchase rates. To compare the results of the regression models across Python and R, I will be specifically looking at intercept/SE, random intercept variance/SE, and p-value.
 
 ### Differences from Original Study
 
-The original study uses a between-subjects experiment where subjects are asked to interact with recommender systems that are 
-categorized in a high attractiveness or low attractiveness condition. From there, certain engagement metrics are assesed and analyzed in R. 
-My study will not replicate the between-subjects experiment, and instead focus on reproducing the results sof the quantitative analysis in 
-Python. I will also do some additional computation, including generating descriptive statistics
-and a correlation analysis.
-
+The original study uses a between-subjects experiment where subjects are asked to interact with recommender systems that are categorized in a high attractiveness or low attractiveness condition. From there, certain engagement metrics are assessed and analyzed in R. My study will not replicate the between-subjects experiment, and instead focus on reproducing the results of the quantitative analysis in Python. I will also do some additional computation, including generating descriptive statistics and a correlation analysis.
 
 ### Methods Addendum (Post Data Collection)
 
 You can comment this section out prior to final report with data collection.
 
 #### Actual Sample
-  Sample size, demographics, data exclusions based on rules spelled out in analysis plan
+  There were 37,005 observations collected from Cyberfoto, and 14,832 observations collected from Kilands.
 
 #### Differences from pre-data collection methods plan
-  Any differences from what was described as the original plan, or “none”.
+  Because my project is a reporduction, I will not be collecting any new data.
 
 ## Design Overview
 
-In this study, researchers only manipulated 1 factor: the "attractiveness" of the recommender system they used, categorizing 
-each one as "High Attractiveness (HA) or Low Attractiveness (LA). It used a between-participants design, which used 4 measures 
-to evaluate choice overload. The measures were whether a customer purchased a product, if they added it to cart, the number of 
-products viewed in a session, and the session time. These measures were repeated for each customer in the study. For its 
-computational aspect, it conducted a linear regression and multi-level regression in R. If the researchers were to conduct the 
-quantitative analysis in a different programming language, the analysis insights should be the same or similar, but might vary 
-in the visualizations produced and readability of the code.
+In this study, researchers only manipulated 1 factor: the "attractiveness" of the recommender system they used, categorizing each one as "High Attractiveness (HA) or Low Attractiveness (LA). It used a between-participants design, which used 4 measures to evaluate choice overload. The measures were whether a customer purchased a product, if they added it to cart, the number of products viewed in a session, and the session time. These measures were repeated for each customer in the study. For its computational aspect, it conducted a multilevel logistic regression, multilevel negative binomial regression, and multilevel linear regression in R. If the researchers were to conduct the quantitative analysis in a different programming language, the analysis insights should be the same or similar, but might vary in the visualizations produced and readability of the code.
 
 One way I would critique the experimental design is that it lacks data on subjective measures, such as the individual 
 customer's satisfaction, perceived difficulty, or regret. These subjective responses can be important indicators of choice 
@@ -129,6 +89,9 @@ findings to other retail contexts.
 In order to measure the success of the outcome of my reproduction, I will be comparing the results of the descriptive statistics, ANOVA, linear mixed-effects models, and power analysis with the R code to my Python code. This means ensuring the numerical outputs of the R code match that of the Python code. I will compute these using built in Pandas and Statsmodels functions, such as .describe() and .mixedlm() and compare their outputs.
 
 At this point in the project, I have successfully loaded and explored the most important aspects of the datasets I'm working with. I have also finished downloading all the necessary R libraries I will need to do run the R code. Currently, I am working on data wrangling and generating more in-depth descriptive statistics. I have not begun generating regression models or data visualizations yet, but I expect to make further progress on these steps in the coming weeks. 
+
+## Project Progress Check #2
+
 
 ## Results
 
